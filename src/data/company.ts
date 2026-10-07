@@ -23,4 +23,4 @@ export const nav = [
 
 // URL du webhook n8n (laisser vide tant que non connecté).
 // Peut aussi être défini via la variable VITE_N8N_WEBHOOK_URL.
-export const webhookUrl: string = import.meta.env.VITE_N8N_WEBHOOK_URL ?? "";
+export const webhookUrl: string = import.meta.env["VITE_N8N_WEBHOOK_URL"] ?? "";
