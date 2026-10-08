@@ -18,7 +18,7 @@ export const Route = createFileRoute("/proprietaires")({
           <Reveal><SectionTitle eyebrow="Notre engagement" title="Une relation transparente, dès le premier jour." /></Reveal>
           <ul className="border-t border-foreground/20">
             {included.map((i) => (
-              <li key={i} className="flex items-baseline gap-4 border-b border-foreground/20 py-5 text-lg"><span className="text-accent">—</span>{i}</li>
+              <li key={i} className="flex items-baseline gap-4 border-b border-foreground/20 py-5 text-lg"><span className="text-accent-deep">—</span>{i}</li>
             ))}
           </ul>
         </Container>

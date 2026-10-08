@@ -23,7 +23,7 @@ export type SectionTone = "ivory" | "sand" | "ink";
 const toneClass: Record<SectionTone, string> = {
   ivory: "bg-surface-ivory text-foreground",
   sand: "bg-surface-sand text-foreground",
-  ink: "bg-surface-ink text-ink-foreground",
+  ink: "bg-surface-ink text-ink-foreground [--eyebrow-color:var(--color-accent)]",
 };
 
 export function Section({ tone = "ivory", className, children, id, ariaLabel }: { tone?: SectionTone; className?: string; children: ReactNode; id?: string; ariaLabel?: string }) {

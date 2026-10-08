@@ -13,9 +13,9 @@ export const Route = createFileRoute("/estimation-revenus")({
           <h1 className="text-5xl leading-[1.02] md:text-7xl">Ce que votre logement pourrait <em className="text-accent">vous rapporter</em>.</h1>
           <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">Quelques informations suffisent. Nous analysons votre bien et le marché local, puis revenons vers vous sous 48h — sans engagement.</p>
           <ol className="mt-12 space-y-4 border-t border-border-strong pt-8 text-sm">
-            <li><span className="text-accent">01 —</span> Vous remplissez le formulaire</li>
-            <li><span className="text-accent">02 —</span> Nous étudions votre logement</li>
-            <li><span className="text-accent">03 —</span> Vous recevez votre estimation détaillée</li>
+            <li><span className="text-accent-deep">01 —</span> Vous remplissez le formulaire</li>
+            <li><span className="text-accent-deep">02 —</span> Nous étudions votre logement</li>
+            <li><span className="text-accent-deep">03 —</span> Vous recevez votre estimation détaillée</li>
           </ol>
         </div>
         <div className="border border-border-strong bg-card p-6 md:p-12 lg:col-span-7">

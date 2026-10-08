@@ -37,6 +37,7 @@
   --color-surface-sand: var(--sand);
   --color-surface-ink: var(--ink);
   --color-border-strong: var(--border-strong);
+  --color-accent-deep: var(--accent-deep);
 }
 
 :root {
@@ -52,7 +53,7 @@
   --secondary: oklch(0.93 0.018 80);
   --secondary-foreground: oklch(0.24 0.008 60);
   --muted: oklch(0.94 0.014 82);
-  --muted-foreground: oklch(0.5 0.015 65);
+  --muted-foreground: oklch(0.44 0.02 62);
   --accent: oklch(0.62 0.085 65);
   --accent-foreground: oklch(0.99 0.005 85);
   --destructive: oklch(0.55 0.18 27);
@@ -64,6 +65,7 @@
   --ink-foreground: oklch(0.95 0.012 82);
   --sand: oklch(0.91 0.025 78);
   --border-strong: oklch(0.74 0.028 78);
+  --accent-deep: oklch(0.46 0.09 62);
 }
 
 @layer base {
@@ -83,7 +85,7 @@
   font-size: 0.7rem;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--eyebrow-color, var(--color-accent-deep));
 }
 
 @utility reveal {

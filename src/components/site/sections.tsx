@@ -34,7 +34,7 @@ export function BenefitsSection() {
         <div className="grid gap-px bg-border sm:grid-cols-2 lg:col-span-7">
           {benefits.map((b, i) => (
             <Reveal key={b.title} delay={i * 80} className="bg-background p-8 md:p-10">
-              <p className="font-display text-lg text-accent">0{i + 1}</p>
+              <p className="font-display text-lg text-accent-deep">0{i + 1}</p>
               <h3 className="mt-6 text-3xl">{b.title}</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{b.text}</p>
             </Reveal>
@@ -51,7 +51,7 @@ export function ServicesList({ detailed = false }: { detailed?: boolean }) {
       {services.map((s, i) => (
         <li key={s.title}>
           <Reveal className="grid gap-4 border-b border-border-strong py-8 md:grid-cols-12 md:gap-8 md:py-10">
-            <span className="font-display text-lg text-accent md:col-span-1">{String(i + 1).padStart(2, "0")}</span>
+            <span className="font-display text-lg text-accent-deep md:col-span-1">{String(i + 1).padStart(2, "0")}</span>
             <h3 className="text-3xl md:col-span-5 md:text-4xl">{s.title}</h3>
             <div className="md:col-span-6">
               <p className="leading-relaxed text-muted-foreground">{s.description}</p>
@@ -160,7 +160,7 @@ export function FaqList({ limit }: { limit?: number }) {
             <h3 className="font-sans">
               <button className="flex w-full items-center justify-between gap-6 py-6 text-left text-lg" aria-expanded={isOpen} onClick={() => setOpen(isOpen ? null : i)}>
                 {f.q}
-                {isOpen ? <Minus className="size-4 shrink-0 text-accent" /> : <Plus className="size-4 shrink-0 text-accent" />}
+                {isOpen ? <Minus className="size-4 shrink-0 text-accent-deep" /> : <Plus className="size-4 shrink-0 text-accent-deep" />}
               </button>
             </h3>
             {isOpen && <p className="max-w-2xl pb-6 leading-relaxed text-muted-foreground">{f.a}</p>}
