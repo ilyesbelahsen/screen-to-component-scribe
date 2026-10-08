@@ -3,7 +3,7 @@ import bedroom from "@/assets/bedroom.jpg";
 import { seo } from "@/lib/seo";
 import { Container, PageHero, SectionTitle } from "@/components/site/ui";
 import { Reveal } from "@/components/site/Reveal";
-import { BenefitsSection, EstimateBand, FinalCta, StatsBand, TestimonialsSection } from "@/components/site/sections";
+import { BenefitsSection, EstimateBand, FinalCta, TestimonialsSection } from "@/components/site/sections";
 
 const included = ["Vous restez propriétaire de votre calendrier", "Un relevé mensuel clair et détaillé", "Un interlocuteur dédié joignable", "Aucun engagement de durée", "Aucun frais de mise en place caché", "Un logement entretenu aux standards hôteliers"];
 
@@ -12,7 +12,6 @@ export const Route = createFileRoute("/proprietaires")({
   component: () => (
     <>
       <PageHero eyebrow="Propriétaires" title={<>Vous gardez les revenus. <em className="text-accent">Nous gardons le reste.</em></>} intro="Que vous louiez déjà ou que vous envisagiez de vous lancer, nous construisons avec vous une stratégie sur mesure pour votre bien." image={bedroom} />
-      <StatsBand />
       <BenefitsSection />
       <section className="bg-sand py-24 md:py-32">
         <Container className="grid gap-12 lg:grid-cols-2">
