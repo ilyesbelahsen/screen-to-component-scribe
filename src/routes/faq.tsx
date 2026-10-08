@@ -8,8 +8,8 @@ export const Route = createFileRoute("/faq")({
   component: () => (
     <>
       <PageHero eyebrow="FAQ" title="Vos questions, nos réponses." intro="Vous ne trouvez pas votre réponse ? Contactez-nous, nous vous répondons rapidement." />
-      <Section tone="ivory" className="py-24"><Container className="max-w-4xl"><FaqList /></Container></Section>
-      <FinalCta />
+      <Section tone="sand" className="py-24"><Container className="max-w-4xl"><FaqList /></Container></Section>
+      <FinalCta tone="ivory" />
     </>
   ),
 });

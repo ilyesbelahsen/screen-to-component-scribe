@@ -6,6 +6,7 @@ import { faq } from "@/data/faq";
 import { stats } from "@/data/stats";
 import { Reveal } from "./Reveal";
 import { ButtonLink, Container, Section, SectionTitle } from "./ui";
+import type { SectionTone } from "./ui";
 import keys from "@/assets/keys.jpg";
 
 export function StatsBand() {
@@ -170,9 +171,9 @@ export function FaqList({ limit }: { limit?: number }) {
   );
 }
 
-export function FinalCta() {
+export function FinalCta({ tone = "sand" }: { tone?: SectionTone }) {
   return (
-    <Section tone="sand" className="py-28 md:py-40">
+    <Section tone={tone} className="py-28 md:py-40">
       <Container>
         <Reveal className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl leading-[1.1] md:text-6xl lg:text-7xl">Et si vous arrêtiez de gérer votre location pour commencer à <em className="text-accent">en profiter</em> ?</h2>
