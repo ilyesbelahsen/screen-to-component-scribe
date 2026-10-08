@@ -1,6 +1,6 @@
 // Informations de l'entreprise — à remplacer par vos vraies coordonnées.
 export const company = {
-  name: "Maison Hôte",
+  name: "Maison Belahsen",
   tagline: "Conciergerie de location courte durée à Tanger",
   city: "Tanger, Maroc",
   email: "",
@@ -15,7 +15,6 @@ export const nav = [
   { to: "/", label: "Accueil" },
   { to: "/services", label: "Services" },
   { to: "/proprietaires", label: "Propriétaires" },
-  { to: "/estimation-revenus", label: "Estimation revenus" },
   { to: "/a-propos", label: "À propos" },
   { to: "/faq", label: "FAQ" },
   { to: "/contact", label: "Contact" },
