@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import bedroom from "@/assets/bedroom.jpg";
 import { seo } from "@/lib/seo";
-import { Container, PageHero, SectionTitle } from "@/components/site/ui";
+import { Container, PageHero, Section, SectionTitle } from "@/components/site/ui";
 import { Reveal } from "@/components/site/Reveal";
 import { BenefitsSection, EstimateBand, FinalCta, TestimonialsSection } from "@/components/site/sections";
 
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/proprietaires")({
     <>
       <PageHero eyebrow="Propriétaires" title={<>Vous gardez les revenus. <em className="text-accent">Nous gardons le reste.</em></>} intro="Que vous louiez déjà ou que vous envisagiez de vous lancer, nous construisons avec vous une stratégie sur mesure pour votre bien." image={bedroom} />
       <BenefitsSection />
-      <section className="bg-sand py-24 md:py-32">
+      <Section tone="ivory" className="py-24 md:py-32">
         <Container className="grid gap-12 lg:grid-cols-2">
           <Reveal><SectionTitle eyebrow="Notre engagement" title="Une relation transparente, dès le premier jour." /></Reveal>
           <ul className="border-t border-foreground/20">
@@ -22,7 +22,7 @@ export const Route = createFileRoute("/proprietaires")({
             ))}
           </ul>
         </Container>
-      </section>
+      </Section>
       <TestimonialsSection />
       <EstimateBand />
       <FinalCta />

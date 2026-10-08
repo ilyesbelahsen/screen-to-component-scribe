@@ -5,12 +5,12 @@ import { testimonials } from "@/data/testimonials";
 import { faq } from "@/data/faq";
 import { stats } from "@/data/stats";
 import { Reveal } from "./Reveal";
-import { ButtonLink, Container, SectionTitle } from "./ui";
+import { ButtonLink, Container, Section, SectionTitle } from "./ui";
 import keys from "@/assets/keys.jpg";
 
 export function StatsBand() {
   return (
-    <section aria-label="Chiffres clés" className="border-b border-border">
+    <Section ariaLabel="Chiffres clés" tone="ivory" className="border-b border-border">
       <Container className="grid grid-cols-2 lg:grid-cols-4">
         {stats.map((s, i) => (
           <Reveal key={s.label} delay={i * 80} className="border-border py-12 pr-6 [&:not(:first-child)]:lg:border-l lg:pl-8">
@@ -19,13 +19,13 @@ export function StatsBand() {
           </Reveal>
         ))}
       </Container>
-    </section>
+    </Section>
   );
 }
 
 export function BenefitsSection() {
   return (
-    <section className="py-24 md:py-36">
+    <Section tone="sand" className="py-24 md:py-36">
       <Container className="grid gap-16 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
           <SectionTitle eyebrow="Pour les propriétaires" title={<>Votre logement, <em className="text-accent">sans la charge</em>.</>} intro="Vous gardez la propriété et les revenus. Nous prenons tout le reste en main, avec l'exigence d'un hôtel." />
@@ -40,16 +40,16 @@ export function BenefitsSection() {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
 
 export function ServicesList({ detailed = false }: { detailed?: boolean }) {
   return (
-    <ul className="border-t border-border">
+    <ul className="border-t border-border-strong">
       {services.map((s, i) => (
         <li key={s.title}>
-          <Reveal className="grid gap-4 border-b border-border py-8 md:grid-cols-12 md:gap-8 md:py-10">
+          <Reveal className="grid gap-4 border-b border-border-strong py-8 md:grid-cols-12 md:gap-8 md:py-10">
             <span className="font-display text-lg text-accent md:col-span-1">{String(i + 1).padStart(2, "0")}</span>
             <h3 className="text-3xl md:col-span-5 md:text-4xl">{s.title}</h3>
             <div className="md:col-span-6">
@@ -57,7 +57,7 @@ export function ServicesList({ detailed = false }: { detailed?: boolean }) {
               {detailed && (
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {s.details.map((d) => (
-                    <li key={d} className="border border-border px-3 py-1.5 text-xs tracking-wide">{d}</li>
+                    <li key={d} className="border border-border-strong px-3 py-1.5 text-xs tracking-wide">{d}</li>
                   ))}
                 </ul>
               )}
@@ -71,7 +71,7 @@ export function ServicesList({ detailed = false }: { detailed?: boolean }) {
 
 export function StepsSection() {
   return (
-    <section className="bg-sand py-24 md:py-36">
+    <Section tone="ivory" className="py-24 md:py-36">
       <Container>
         <Reveal><SectionTitle eyebrow="Comment ça marche" title="Quatre étapes, un seul interlocuteur." /></Reveal>
         <ol className="mt-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
@@ -86,13 +86,13 @@ export function StepsSection() {
           ))}
         </ol>
       </Container>
-    </section>
+    </Section>
   );
 }
 
 export function EstimateBand() {
   return (
-    <section className="bg-ink text-ink-foreground">
+    <Section tone="ink">
       <div className="grid lg:grid-cols-2">
         <img src={keys} alt="Remise des clés par un concierge" loading="lazy" width={1600} height={1104} className="h-72 w-full object-cover lg:h-full" />
         <Reveal className="px-6 py-20 md:px-16 lg:py-32">
@@ -102,13 +102,13 @@ export function EstimateBand() {
           <ButtonLink to="/estimation-revenus" variant="light" className="mt-10">Estimer mes revenus</ButtonLink>
         </Reveal>
       </div>
-    </section>
+    </Section>
   );
 }
 
 export function ValuesSection() {
   return (
-    <section className="py-24 md:py-36">
+    <Section tone="ivory" className="py-24 md:py-36">
       <Container>
         <Reveal><SectionTitle eyebrow="Pourquoi nous" title="L'exigence de l'hôtellerie, la proximité d'un partenaire local." /></Reveal>
         <div className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -120,13 +120,13 @@ export function ValuesSection() {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
 
 export function TestimonialsSection() {
   return (
-    <section className="border-t border-border bg-card py-24 md:py-36">
+    <Section tone="sand" className="py-24 md:py-36">
       <Container>
         <Reveal><SectionTitle eyebrow="Avis propriétaires" title="Ils nous ont confié leur bien." /></Reveal>
         <div className="mt-16 grid gap-12 md:grid-cols-3">
@@ -143,7 +143,7 @@ export function TestimonialsSection() {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }
 
@@ -151,11 +151,11 @@ export function FaqList({ limit }: { limit?: number }) {
   const [open, setOpen] = useState<number | null>(0);
   const items = limit ? faq.slice(0, limit) : faq;
   return (
-    <div className="border-t border-border">
+    <div className="border-t border-border-strong">
       {items.map((f, i) => {
         const isOpen = open === i;
         return (
-          <div key={f.q} className="border-b border-border">
+          <div key={f.q} className="border-b border-border-strong">
             <h3 className="font-sans">
               <button className="flex w-full items-center justify-between gap-6 py-6 text-left text-lg" aria-expanded={isOpen} onClick={() => setOpen(isOpen ? null : i)}>
                 {f.q}
@@ -172,13 +172,13 @@ export function FaqList({ limit }: { limit?: number }) {
 
 export function FinalCta() {
   return (
-    <section className="py-28 md:py-40">
+    <Section tone="sand" className="py-28 md:py-40">
       <Container>
         <Reveal className="mx-auto max-w-4xl text-center">
           <h2 className="text-4xl leading-[1.1] md:text-6xl lg:text-7xl">Et si vous arrêtiez de gérer votre location pour commencer à <em className="text-accent">en profiter</em> ?</h2>
           <ButtonLink to="/estimation-revenus" className="mt-12">Estimer mes revenus</ButtonLink>
         </Reveal>
       </Container>
-    </section>
+    </Section>
   );
 }

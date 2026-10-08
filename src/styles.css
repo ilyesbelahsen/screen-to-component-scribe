@@ -33,6 +33,10 @@
   --color-ink: var(--ink);
   --color-ink-foreground: var(--ink-foreground);
   --color-sand: var(--sand);
+  --color-surface-ivory: var(--background);
+  --color-surface-sand: var(--sand);
+  --color-surface-ink: var(--ink);
+  --color-border-strong: var(--border-strong);
 }
 
 :root {
@@ -59,6 +63,7 @@
   --ink: oklch(0.22 0.008 60);
   --ink-foreground: oklch(0.95 0.012 82);
   --sand: oklch(0.91 0.025 78);
+  --border-strong: oklch(0.74 0.028 78);
 }
 
 @layer base {
