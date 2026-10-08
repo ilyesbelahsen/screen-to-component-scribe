@@ -3,7 +3,7 @@ import hero from "@/assets/hero.jpg";
 import bedroom from "@/assets/bedroom.jpg";
 import kitchen from "@/assets/kitchen.jpg";
 import { seo } from "@/lib/seo";
-import { ButtonLink, Container, SectionTitle } from "@/components/site/ui";
+import { ButtonLink, Container, Section, SectionTitle } from "@/components/site/ui";
 import { Reveal } from "@/components/site/Reveal";
 import { BenefitsSection, FaqList, FinalCta, ServicesList, StatsBand, TestimonialsSection, ValuesSection } from "@/components/site/sections";
 
@@ -32,14 +32,14 @@ function Index() {
       <StatsBand />
       <BenefitsSection />
 
-      <section className="pb-24 md:pb-36">
+      <Section tone="ivory" className="pb-24 md:pb-36">
         <Container className="grid gap-6 md:grid-cols-12">
           <Reveal className="md:col-span-7"><img src={bedroom} alt="Chambre aux standards hôteliers" loading="lazy" width={1200} height={1504} className="aspect-[4/5] w-full object-cover md:aspect-[5/6]" /></Reveal>
           <Reveal delay={150} className="md:col-span-5 md:mt-40"><img src={kitchen} alt="Plateau d'accueil pour les voyageurs" loading="lazy" width={1200} height={1504} className="aspect-[4/5] w-full object-cover" /></Reveal>
         </Container>
-      </section>
+      </Section>
 
-      <section className="pb-24 md:pb-36">
+      <Section tone="sand" className="py-24 md:py-36">
         <Container>
           <div className="mb-14 flex flex-wrap items-end justify-between gap-8">
             <Reveal><SectionTitle eyebrow="Nos services" title="Un accompagnement complet, du premier shooting au dernier check-out." /></Reveal>
@@ -47,12 +47,12 @@ function Index() {
           </div>
           <ServicesList />
         </Container>
-      </section>
+      </Section>
 
       <ValuesSection />
       <TestimonialsSection />
 
-      <section className="py-24 md:py-36">
+      <Section tone="ivory" className="py-24 md:py-36">
         <Container className="grid gap-12 lg:grid-cols-12">
           <Reveal className="lg:col-span-4"><SectionTitle eyebrow="FAQ" title="Questions fréquentes" /></Reveal>
           <div className="lg:col-span-8">
@@ -60,7 +60,7 @@ function Index() {
             <ButtonLink to="/faq" variant="outline" className="mt-10">Toutes les questions</ButtonLink>
           </div>
         </Container>
-      </section>
+      </Section>
 
       <FinalCta />
     </>

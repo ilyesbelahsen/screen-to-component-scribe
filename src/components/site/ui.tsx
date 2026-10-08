@@ -18,6 +18,22 @@ export function ButtonLink({ to, children, variant = "dark", className }: { to: 
   );
 }
 
+export type SectionTone = "ivory" | "sand" | "ink";
+
+const toneClass: Record<SectionTone, string> = {
+  ivory: "bg-surface-ivory text-foreground",
+  sand: "bg-surface-sand text-foreground",
+  ink: "bg-surface-ink text-ink-foreground [--eyebrow-color:var(--color-accent)]",
+};
+
+export function Section({ tone = "ivory", className, children, id, ariaLabel }: { tone?: SectionTone; className?: string; children: ReactNode; id?: string; ariaLabel?: string }) {
+  return (
+    <section id={id} aria-label={ariaLabel} className={cn(toneClass[tone], className)}>
+      {children}
+    </section>
+  );
+}
+
 export function SectionTitle({ eyebrow, title, intro, className, center }: { eyebrow?: string; title: ReactNode; intro?: ReactNode; className?: string; center?: boolean }) {
   return (
     <div className={cn("max-w-2xl", center && "mx-auto text-center", className)}>
@@ -30,7 +46,7 @@ export function SectionTitle({ eyebrow, title, intro, className, center }: { eye
 
 export function PageHero({ eyebrow, title, intro, image }: { eyebrow: string; title: ReactNode; intro?: ReactNode; image?: string }) {
   return (
-    <section className="relative overflow-hidden border-b border-border">
+    <section className="relative overflow-hidden border-b border-border bg-surface-ivory">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-40 md:px-10 lg:grid-cols-12 lg:pb-28 lg:pt-48">
         <div className={image ? "lg:col-span-7" : "lg:col-span-10"}>
           <p className="eyebrow mb-6">{eyebrow}</p>

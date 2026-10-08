@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import keys from "@/assets/keys.jpg";
 import { seo } from "@/lib/seo";
 import { company } from "@/data/company";
-import { Container, PageHero } from "@/components/site/ui";
+import { Container, PageHero, Section } from "@/components/site/ui";
 import { Reveal } from "@/components/site/Reveal";
 import { FinalCta, ValuesSection } from "@/components/site/sections";
 
@@ -11,7 +11,7 @@ export const Route = createFileRoute("/a-propos")({
   component: () => (
     <>
       <PageHero eyebrow="À propos" title={<>L'hospitalité comme <em className="text-accent">métier</em>.</>} intro={`${company.name} est née d'une conviction : un logement bien tenu et un accueil sincère font toute la différence, pour les voyageurs comme pour les propriétaires.`} />
-      <section className="py-24 md:py-32">
+      <Section tone="sand" className="py-24 md:py-32">
         <Container className="grid gap-16 lg:grid-cols-2">
           <Reveal><img src={keys} alt="Remise des clés" loading="lazy" width={1600} height={1104} className="aspect-[4/3] w-full object-cover" /></Reveal>
           <Reveal delay={120} className="space-y-6 text-lg leading-relaxed text-muted-foreground">
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/a-propos")({
             <p>Notre approche associe le soin du détail de l'hôtellerie haut de gamme à une gestion rigoureuse, guidée par les données, pour des résultats durables.</p>
           </Reveal>
         </Container>
-      </section>
+      </Section>
       <ValuesSection />
       <FinalCta />
     </>
