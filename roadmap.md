@@ -1,0 +1,3 @@
+- [ ] Adapter les textes, coordonnées et référencement à Tanger.
+- [ ] Remplacer le visuel parisien par une illustration adaptée à Tanger.
+- [ ] Vérifier les pages et présenter les résultats avec le statut de synchronisation GitHub.
