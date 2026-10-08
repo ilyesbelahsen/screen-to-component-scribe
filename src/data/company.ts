@@ -1,12 +1,12 @@
 // Informations de l'entreprise — à remplacer par vos vraies coordonnées.
 export const company = {
   name: "Maison Hôte",
-  tagline: "Conciergerie de location courte durée",
-  city: "Paris & alentours",
-  email: "contact@maison-hote.fr",
-  phone: "+33 1 00 00 00 00",
-  address: "00 rue de l'Exemple, 75000 Paris",
-  hours: "Lundi – samedi, 9h – 19h",
+  tagline: "Conciergerie de location courte durée à Tanger",
+  city: "Tanger, Maroc",
+  email: "",
+  phone: "",
+  address: "",
+  hours: "",
   instagram: "https://instagram.com/",
   linkedin: "https://linkedin.com/",
 };

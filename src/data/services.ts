@@ -8,7 +8,7 @@ export const services: Service[] = [
   { title: "Check-in / check-out", description: "Un accueil personnalisé ou autonome, et un état des lieux rigoureux à chaque départ.", details: ["Accueil en personne", "Boîte à clés sécurisée", "État des lieux"] },
   { title: "Ménage & linge", description: "Un entretien de standard hôtelier, linge de lit et serviettes fournis et blanchis.", details: ["Ménage hôtelier", "Linge premium", "Consommables d'accueil"] },
   { title: "Maintenance", description: "Un réseau d'artisans de confiance pour intervenir rapidement en cas d'imprévu.", details: ["Petites réparations", "Artisans partenaires", "Contrôles réguliers"] },
-  { title: "Tarification dynamique", description: "Des prix ajustés chaque jour selon la demande, les événements et la saisonnalité.", details: ["Analyse du marché", "Ajustement quotidien", "Rapport mensuel"] },
+  { title: "Tarification dynamique", description: "Des prix adaptés au marché de Tanger, à la demande, aux périodes de vacances et à la saisonnalité.", details: ["Marché tangérois", "Saisonnalité locale", "Rapport mensuel"] },
 ];
 
 export const benefits = [
@@ -26,7 +26,7 @@ export const steps = [
 ];
 
 export const values = [
-  { title: "Réactivité", text: "Une équipe locale joignable et des interventions rapides." },
+  { title: "Réactivité", text: "Un interlocuteur pour votre logement à Tanger, au plus près des besoins de vos voyageurs." },
   { title: "Transparence", text: "Des comptes clairs, un reporting mensuel, aucun frais caché." },
   { title: "Performance", text: "Des décisions guidées par les données pour maximiser votre rendement." },
   { title: "Sérénité", text: "Votre bien est entretenu et respecté comme s'il était le nôtre." },

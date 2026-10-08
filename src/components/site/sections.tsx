@@ -99,7 +99,7 @@ export function EstimateBand() {
         <Reveal className="px-6 py-20 md:px-16 lg:py-32">
           <p className="eyebrow mb-6">Estimation gratuite</p>
           <h2 className="text-4xl leading-tight md:text-6xl">Combien pourrait rapporter votre logement ?</h2>
-          <p className="mt-6 max-w-md leading-relaxed opacity-75">Recevez sous 48h une estimation personnalisée, fondée sur votre bien et le marché local. Sans engagement.</p>
+          <p className="mt-6 max-w-md leading-relaxed opacity-75">Une estimation personnalisée pour votre logement à Tanger, fondée sur votre quartier, les équipements et la saisonnalité. Sans engagement.</p>
           <ButtonLink to="/estimation-revenus" variant="light" className="mt-10">Estimer mes revenus</ButtonLink>
         </Reveal>
       </div>

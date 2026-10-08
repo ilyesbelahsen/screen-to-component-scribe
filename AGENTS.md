@@ -11,4 +11,6 @@
 
 ## Conventions
 
+- Unconfirmed contact fields stay empty in company data and render as placeholders without actionable contact links. Why: localization must not create fictitious business coordinates.
+
 - Sections are visually separated by surface tone, not borders: use the `Section` component's `tone` prop (`ivory`, `sand`, `ink`) and keep neighbouring sections on different tones. Why: the site reads as alternating ivoire / beige / anthracite bands, so a raw `<section>` or a repeated tone flattens the hierarchy.

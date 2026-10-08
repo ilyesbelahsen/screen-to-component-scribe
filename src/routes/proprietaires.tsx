@@ -8,10 +8,10 @@ import { BenefitsSection, EstimateBand, FinalCta, TestimonialsSection } from "@/
 const included = ["Vous restez propriétaire de votre calendrier", "Un relevé mensuel clair et détaillé", "Un interlocuteur dédié joignable", "Aucun engagement de durée", "Aucun frais de mise en place caché", "Un logement entretenu aux standards hôteliers"];
 
 export const Route = createFileRoute("/proprietaires")({
-  head: () => seo("Propriétaires : confiez votre logement", "Confiez votre bien à une conciergerie premium : revenus optimisés, logement entretenu et zéro gestion au quotidien."),
+  head: () => seo("Propriétaires à Tanger : gestion de votre logement", "Vous possédez un logement à Tanger ? Confiez sa location courte durée à une conciergerie locale, que vous viviez sur place ou à l'étranger."),
   component: () => (
     <>
-      <PageHero eyebrow="Propriétaires" title={<>Vous gardez les revenus. <em className="text-accent">Nous gardons le reste.</em></>} intro="Que vous louiez déjà ou que vous envisagiez de vous lancer, nous construisons avec vous une stratégie sur mesure pour votre bien." image={bedroom} />
+      <PageHero eyebrow="Propriétaires à Tanger" title={<>Votre bien à Tanger. <em className="text-accent">Votre tranquillité, partout.</em></>} intro="Vous vivez à Tanger, ailleurs au Maroc ou à l'étranger ? Nous prenons en main votre location courte durée, avec un suivi clair et une stratégie adaptée à votre logement." image={bedroom} />
       <BenefitsSection />
       <Section tone="ivory" className="py-24 md:py-32">
         <Container className="grid gap-12 lg:grid-cols-2">
