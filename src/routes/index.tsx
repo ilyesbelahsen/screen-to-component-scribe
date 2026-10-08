@@ -5,7 +5,7 @@ import kitchen from "@/assets/kitchen.jpg";
 import { seo } from "@/lib/seo";
 import { ButtonLink, Container, SectionTitle } from "@/components/site/ui";
 import { Reveal } from "@/components/site/Reveal";
-import { BenefitsSection, EstimateBand, FaqList, FinalCta, ServicesList, StatsBand, StepsSection, TestimonialsSection, ValuesSection } from "@/components/site/sections";
+import { BenefitsSection, FaqList, FinalCta, ServicesList, StatsBand, TestimonialsSection, ValuesSection } from "@/components/site/sections";
 
 export const Route = createFileRoute("/")({
   head: () => seo("Conciergerie Airbnb haut de gamme", "Nous gérons votre location courte durée de A à Z : gain de temps, expérience voyageur soignée et revenus optimisés."),
@@ -49,8 +49,6 @@ function Index() {
         </Container>
       </section>
 
-      <StepsSection />
-      <EstimateBand />
       <ValuesSection />
       <TestimonialsSection />
 
