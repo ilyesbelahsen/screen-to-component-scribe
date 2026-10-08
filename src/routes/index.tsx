@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/hero.jpg";
+import hero from "@/assets/tanger-living.jpg";
 import bedroom from "@/assets/bedroom.jpg";
 import kitchen from "@/assets/kitchen.jpg";
 import { seo } from "@/lib/seo";
@@ -8,26 +8,26 @@ import { Reveal } from "@/components/site/Reveal";
 import { BenefitsSection, FaqList, FinalCta, ServicesList, StatsBand, TestimonialsSection, ValuesSection } from "@/components/site/sections";
 
 export const Route = createFileRoute("/")({
-  head: () => seo("Conciergerie Airbnb haut de gamme", "Nous gérons votre location courte durée de A à Z : gain de temps, expérience voyageur soignée et revenus optimisés."),
+  head: () => seo("Conciergerie Airbnb à Tanger", "Gestion de votre location courte durée à Tanger : annonces Airbnb et Booking, accueil des voyageurs, ménage et optimisation des revenus."),
   component: Index,
 });
 
 function Index() {
   return (
     <>
-      <section className="relative flex min-h-[100svh] items-end overflow-hidden bg-ink text-ink-foreground">
-        <img src={hero} alt="Salon lumineux d'un appartement haussmannien" width={1920} height={1152} className="absolute inset-0 h-full w-full scale-105 object-cover animate-in fade-in zoom-in-105 duration-[2000ms]" />
+      <Section tone="ink" className="relative flex min-h-[88svh] items-end overflow-hidden">
+        <img src={hero} alt="Illustration d'un appartement d'inspiration tangéroise avec terrasse sur la mer" width={1920} height={1152} className="absolute inset-0 h-full w-full object-cover animate-in fade-in duration-[2000ms]" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/20" />
         <Container className="relative w-full pb-20 pt-40 md:pb-28">
-          <p className="eyebrow mb-6 !text-ink-foreground/80">Conciergerie de location courte durée</p>
-          <h1 className="max-w-4xl text-5xl leading-[1.02] md:text-7xl lg:text-8xl">Votre logement, géré de A à Z <em>comme un hôtel</em>.</h1>
-          <p className="mt-8 max-w-xl text-lg leading-relaxed opacity-85">Gagnez du temps, offrez une expérience voyageur irréprochable et optimisez vos revenus locatifs — nous nous occupons de tout.</p>
+          <p className="eyebrow mb-6 !text-ink-foreground/80">Tanger, Maroc · Location courte durée</p>
+          <h1 className="max-w-4xl text-5xl leading-[1.02] md:text-7xl lg:text-8xl">Conciergerie à Tanger.<br /><em>L'art de recevoir.</em></h1>
+          <p className="mt-8 max-w-xl text-lg leading-relaxed opacity-85">Votre logement à Tanger, géré de A à Z. Gagnez du temps, soignez l'expérience de vos voyageurs et optimisez vos revenus sur Airbnb et Booking — même à distance.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <ButtonLink to="/estimation-revenus" variant="light">Estimer mes revenus</ButtonLink>
             <ButtonLink to="/services" variant="outline">Découvrir nos services</ButtonLink>
           </div>
         </Container>
-      </section>
+      </Section>
 
       <StatsBand />
       <BenefitsSection />

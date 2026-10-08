@@ -17,10 +17,12 @@ export function Footer() {
           </ul>
         </nav>
         <address className="space-y-2 text-sm not-italic opacity-80">
-          <p><a href={`mailto:${company.email}`} className="hover:underline">{company.email}</a></p>
-          <p><a href={`tel:${company.phone.replace(/\s/g, "")}`} className="hover:underline">{company.phone}</a></p>
-          <p>{company.address}</p>
-          <p>{company.hours}</p>
+          <p>{company.city}</p>
+          {company.email && <p><a href={`mailto:${company.email}`} className="hover:underline">{company.email}</a></p>}
+          {company.phone && <p><a href={`tel:${company.phone.replace(/\s/g, "")}`} className="hover:underline">{company.phone}</a></p>}
+          {company.address && <p>{company.address}</p>}
+          {company.hours && <p>{company.hours}</p>}
+          <p><Link to="/contact" className="hover:underline">Parlons de votre logement</Link></p>
         </address>
       </div>
       <div className="border-t border-ink-foreground/10">

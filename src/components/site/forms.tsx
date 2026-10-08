@@ -1,6 +1,7 @@
 import { useState, type FormEvent, type ReactNode } from "react";
 import { submitForm } from "@/lib/submit-form";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 const fieldCls = "w-full border-0 border-b border-input bg-transparent px-0 py-3 text-base outline-none transition-colors focus:border-accent";
 
@@ -42,9 +43,9 @@ function Success({ title, text }: { title: string; text: string }) {
 function Submit({ state, label }: { state: string; label: string }) {
   return (
     <div className="sm:col-span-2">
-      <button type="submit" disabled={state === "sending"} className="bg-primary px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-accent disabled:opacity-60">
+      <Button type="submit" disabled={state === "sending"} className="h-auto rounded-none bg-primary px-8 py-4 text-xs font-medium uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-accent disabled:opacity-60">
         {state === "sending" ? "Envoi…" : label}
-      </button>
+      </Button>
       {state === "error" && <p className="mt-4 text-sm text-destructive">L'envoi a échoué. Merci de réessayer ou de nous écrire directement.</p>}
     </div>
   );
@@ -59,7 +60,10 @@ export function EstimateForm() {
       <Field label="Nom" name="nom" required />
       <Field label="Email" name="email" type="email" required />
       <Field label="Téléphone" name="telephone" type="tel" required />
-      <Field label="Ville" name="ville" required />
+      <Field label="Ville" name="ville" required>
+        <input name="ville" defaultValue="Tanger" required className={fieldCls} />
+      </Field>
+      <Field label="Quartier à Tanger" name="quartier" placeholder="Quartier de votre logement" />
       <Field label="Type de logement" name="type">
         <select name="type" className={fieldCls} defaultValue="Appartement">
           <option>Studio</option><option>Appartement</option><option>Maison</option><option>Autre</option>
